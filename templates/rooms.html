@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/rooms">Rooms</a>
+    </nav>
+
+    <h1>Rooms Table</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Room ID</th>
+                <th>Room Name</th>
+                <th>Rental Fee</th>
+                <th>Maximum Capacity</th>
+                <th>Projector</th>
+                <th>SmartBoard</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for room in rooms %}
+            <tr>
+                <td>{{ room[0] }}</td>
+                <td>{{ room[1] }}</td>
+                <td>{{ room[2] }}</td>
+                <td>{{ room[3] }}</td>
+                <td>{{ room[4] }}</td>
+                <td>{{ room[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

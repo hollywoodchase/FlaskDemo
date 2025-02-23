@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/credit_cards">Credit Cards</a>
+    </nav>
+
+    <h1>Credit Cards Table</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Credit Card ID</th>
+                <th>Participant ID</th>
+                <th>Credit Card Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for card in credit_cards %}
+            <tr>
+                <td>{{ card[0] }}</td>
+                <td>{{ card[1] }}</td>
+                <td>{{ card[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

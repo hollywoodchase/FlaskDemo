@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/countries">Countries</a>
+        <a href="/participants">Participants</a>
+    </nav>
+
+    <h1>Countries Table</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Country ID</th>
+                <th>Country Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for country in countries %}
+            <tr>
+                <td>{{ country[0] }}</td>
+                <td>{{ country[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

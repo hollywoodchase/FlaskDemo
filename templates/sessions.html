@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions</title>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/sessions">Sessions</a>
+    </nav>
+
+    <h1>Sessions Table</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Room ID</th>
+                <th>Session Manager ID</th>
+                <th>Subject ID</th>
+                <th>Session Date</th>
+                <th>Session Time</th>
+                <th>Topic</th>
+                <th>Session Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for session in sessions %}
+            <tr>
+                <td>{{ session[0] }}</td>
+                <td>{{ session[1] }}</td>
+                <td>{{ session[2] }}</td>
+                <td>{{ session[3] }}</td>
+                <td>{{ session[4] }}</td>
+                <td>{{ session[5] }}</td>
+                <td>{{ session[6] }}</td>
+                <td>{{ session[7] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
