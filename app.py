@@ -66,5 +66,9 @@ def sessions():
     cursor.close()
     return render_template('sessions.html', sessions=sessions)
 
+@app.route('/register', methods=['GET'])
+def register():
+    return render_template('register.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
